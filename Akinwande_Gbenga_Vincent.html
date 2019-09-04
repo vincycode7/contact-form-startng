@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Akinwande Gbenga Vincent </title>
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css">
+    </head>
+
+    <body> 
+            <div class='row col-9 form-con'>
+                <form>
+                    <fieldset>
+                        <legend> Contact-Information </legend>
+
+                        <div> 
+                            <label for ="f-name">
+                                Full name: 
+                            </label>
+                            <input type="text" name="fullname" id = "f-name" oninput= "name_valid()" required> 
+                            <small><p id = "f-val"></p></small>
+                        </div>
+
+                        <div> 
+                            <label for = "e-mail">
+                                Email: 
+                            </label>
+                            <input type="text" name="email" id = "e-mail" oninput= "email_valid()" required> 
+                            <small><p id = "e-val"></p></small>
+                        </div>
+
+                        <div> 
+                            <label for = "title">
+                                Title:
+                            </label> 
+                            <input type="text" name="title" id="title" oninput="title_valid()" required> </div>
+                            <small><p id = "t-val"></p></small>
+
+                        <div> 
+                            <label>
+                                Date: 
+                            </label>
+                            <input type="date" name="date"> </div>
+
+                        <div> 
+                            <label>
+                                Message:
+                                <textarea rows="5" cols="50"  id = "textarea" oninput = "textArea()" name = 'ttarea' required></textarea>
+                            </label> 
+                            <small><p id = "text-val"></p></small>
+                        </div>
+
+
+                        <input type="submit" value="submit">
+                    </fieldset>
+                </form>
+            </div>
+
+            <script>
+
+                function name_valid(){
+                    let f_name = document.querySelector("#f-name").value;
+                    let val_pat = /^([a-zA-Z]{2,}) ([a-zA-Z]{2,})$/;
+
+                    if (val_pat.test(String(f_name).toUpperCase()) && f_name.length >= 4){
+                        document.getElementById("f-val").innerHTML = "valid input";
+                    }
+
+                    else{
+                        document.getElementById("f-val").innerHTML = "invalid input";
+                    }
+
+                    
+                }
+
+                function email_valid(){
+                    let email = document.querySelector("#e-mail").value;
+                    let em_pat = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+                    if (em_pat.test(String(email).toUpperCase())){
+                        document.getElementById('e-val').innerHTML = "valid input";
+                    }
+
+                    else{
+                        document.getElementById('e-val').innerHTML = "invalid input";
+                    }
+                }
+
+                function title_valid(){
+                    let tname = document.querySelector("#title").value;
+                    let tt_pat = /^([a-zA-Z]{2,})$/;
+    
+                    if (tt_pat.test(String(tname).toUpperCase())){
+                        document.getElementById("t-val").innerHTML = "Valid input";
+                    } 
+                    
+                    else {
+                        document.getElementById("t-val").innerHTML = "Input not valid";
+                    }
+                    
+                }
+
+                function textArea(){
+                    let txtname = document.querySelector("#textarea").value;
+                    if(txtname.length < 10){
+                        document.getElementById("text-val").innerHTML = "Please fill this box with at least 10 characters";
+                    } 
+                    
+                    else {
+                        document.getElementById("text-val").innerHTML = "Input valid";
+                    }                   
+                }
+            
+            </script>
+
+        </main>   
+    </body>
+</html>

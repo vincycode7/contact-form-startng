@@ -1,0 +1,179 @@
+/* * {
+    border: 1px solid red !important;
+} */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.grid {
+    border: 1px solid blue !important;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.row {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    border: 3px solid red !important;
+    width: 33.33%;
+}
+
+.col-5 {
+    border: 3px solid black !important;
+    width: 41.66%;
+}
+
+.col-6 {
+    border: 3px solid black !important;
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.hd-sht{
+    display: flex;
+    padding-top: 20px;
+}
+
+h1{
+    color: rgb(51, 119, 119);
+}
+
+h4{
+    color: rgb(38, 77, 77);
+}
+
+.p-img{
+    border-radius: 1000px;
+    margin: auto;
+    width:200px;
+    height:200px;
+}
+
+.hd-con{
+    word-wrap: break-word;
+    text-align: left;
+    padding-top: 20px;
+}
+
+.hd-cn{
+    border: None;
+    word-wrap: break-word;
+    text-align: right;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.as{
+    display: flex;
+}
+
+.form-con{
+    margin:auto;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* <form >
+<div>
+    <h3>Contact</h3>
+
+    <label for ="fname">NAME : </label><input type="text" id = "fname" oninput= "nameTwo()" name="fname" required/>
+    <small><p id = "valid"></p></small>
+
+    <label for ="email">E-MAIL : </label><input type="text" id = "mat" oninput= "emailPart()" name = 'email'/>
+    <small><p id="valid1"></p></small>
+
+    <label for ="title">TITLE : </label><input type="text" id = "title" oninput = "titleOne()" name = 'title' required/>
+    <small><p id="valid2"></p></small>
+
+    <label for ="area">MESSAGE : </label><textarea rows="10" cols="60"  id = "textarea" oninput = "textArea()" name = 'area' required></textarea>
+    <small><p id="valid3"></p></small>
+
+    <input type ='submit' id = "submit"  value ='Submit'/>
+</div>
+</form> */
+
+
+/* function nameTwo(){
+    let fname = document.querySelector("#fname").value;
+    let fpattern =     /^([a-zA-Z]{2,}) ([a-zA-Z]{2,})$/;
+
+        if(fpattern.test(String(fname).toUpperCase())  == true && !fname.length < 4   ){
+            ftext = "Valid input";
+        } else {
+            ftext = "Input not valid";
+        }
+    
+       document.getElementById("valid").innerHTML = ftext;
+
+} 
+
+
+
+                        function emailPart(){
+                            let name = document.querySelector("#mat").value;
+                            let valid = document.querySelector("#valid1");
+                            let pattern =/\S+@\S+/;
+            
+                                if(pattern.test(String(name).toLowerCase()) == true){
+                                    text = "Valid input";
+                                } else {
+                                    text = "Input not valid";
+                                }
+                            
+                               document.getElementById("valid1").innerHTML = text;
+                            }
+                            
+                            */
